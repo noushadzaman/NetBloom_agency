@@ -6,6 +6,7 @@ import Logo5 from '../assets/logos/notion.png'
 import Logo6 from '../assets/logos/zoom.png'
 
 const LogoCarousel = () => {
+    
     return (
         <div className="pt-24 overflow-hidden">
             <div className='flex space-x-12 justify-between items-center animate-marquee'>

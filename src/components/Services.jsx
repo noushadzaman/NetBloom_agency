@@ -32,7 +32,7 @@ const Services = () => {
 
                                 {/* image */}
                                 <div className="md:w-1/2 order-first md:order-last">
-                                    <img className="w-full object-cover rounded-md mb-4" src={service.image} alt="" />
+                                    <img className="pointer-events-none w-full object-cover rounded-md mb-4" src={service.image} alt="" />
                                 </div>
                             </div>
                         ))

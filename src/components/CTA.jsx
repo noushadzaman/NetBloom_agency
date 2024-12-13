@@ -14,7 +14,7 @@ const CTA = () => {
                 {/* right side */}
                 <div className="md:w-1/2 flex justify-end items-center relative">
                     <img
-                        className='md:absolute md:-top-52 md:bottom-0'
+                        className='md:absolute md:-top-52 md:bottom-0 pointer-events-none'
                         style={{ transform: 'scale(1.05)' }}
                         src={CTAIMG}
                         alt=""

@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: "#B9FF66",
         secondary: "#191A23",
-        tertiary: "#FEFEFE",
+        tertiary: "#F3F3F3",
       },
       fontFamily: {
         primary: ["Space Grotesk", "sans-serif"],

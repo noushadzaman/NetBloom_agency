@@ -9,7 +9,7 @@ const Team = () => {
     };
 
     return (
-        <section className="pt-24 pb-12 bg-white">
+        <section id='team' className="pt-24 pb-12 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* headline and description */}
                 <div className="flex flex-col md:flex-row gap-4 mb-12">
@@ -27,7 +27,7 @@ const Team = () => {
                             <div key={index} className="bg-white hover:bg-primary rounded-lg border hover:border-primary shadow-lg p-6 cursor-pointer transition-all duration-300">
                                 <div className="relative mb-4">
                                     <div className="flex flex-col sm:flex-row sm:items-end items-start gap-4 justify-start">
-                                        <img className="w-32 h-32 object-cover" src={member.image} alt="" />
+                                        <img className="w-32 h-32 object-cover pointer-events-none" src={member.image} alt="" />
                                         <div>
                                             <h3 className="text-xl font-semibold">{member.name}</h3>
                                             <p className="text-secondary">{member.position}</p>

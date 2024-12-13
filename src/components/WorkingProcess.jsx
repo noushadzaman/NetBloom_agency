@@ -1,6 +1,7 @@
 import { useState } from "react"
 import processSteps from "../utils/processSteps";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 const WorkingProcess = () => {
     const [openIndex, setOpenIndex] = useState(0);
@@ -25,7 +26,8 @@ const WorkingProcess = () => {
                 <div>
                     {
                         processSteps.map((step, index) => (
-                            <div key={index} className={`border rounded-md mb-4 overflow-hidden ${openIndex === index ? 'border-primary' : 'border-gray-300'}`}>
+                            <div
+                                key={index} className={`border rounded-md mb-4 overflow-hidden ${openIndex === index ? 'border-primary' : 'border-gray-300'}`}>
                                 <button
                                     onClick={() => handleToggle(index)}
                                     className={`w-full text-left p-4 flex justify-between items-center ${openIndex === index ? 'bg-primary' : 'bg-[#F3F3F3]'}`}>
@@ -41,9 +43,15 @@ const WorkingProcess = () => {
                                 </button>
                                 {
                                     openIndex === index && (
-                                        <div className="p-4 bg-primary text-secondary">
-                                            <hr className="mt-0 mb-5 border-black " />
-                                            <p>{step.answer}</p>
+                                        <div className="bg-primary">
+                                            <hr className="mt-0 border-black mx-4" />
+                                            <motion.div
+                                                initial={{ opacity: 0, y: -50 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.5 }}
+                                                className="p-4 text-secondary">
+                                                <p>{step.answer}</p>
+                                            </motion.div>
                                         </div>
                                     )
                                 }

@@ -1,8 +1,8 @@
-import { BsChatQuote } from "react-icons/bs"
-import testimonialsData from "../utils/testimonialsData"
-import { IoArrowBack, IoArrowForward } from "react-icons/io5"
-import { useEffect, useState } from "react"
-import { motion } from 'framer-motion'
+import { BsChatQuote } from "react-icons/bs";
+import testimonialsData from "../utils/testimonialsData";
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
 
 const Testimonials = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

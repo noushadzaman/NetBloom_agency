@@ -12,7 +12,7 @@ import WorkingProcess from "./components/WorkingProcess"
 function App() {
 
   return (
-    <div className="font-primary pt-[64px]">
+    <div className="font-primary pt-[64px] overflow-hidden">
       <Navbar />
       <Hero />
       <Services />

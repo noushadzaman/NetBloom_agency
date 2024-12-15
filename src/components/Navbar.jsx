@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 import menuItems from "../utils/menuItems";
+import NavLogo from "../assets/logo (3).png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,15 +41,13 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     {/* logo */}
-                    <div>
-                        <a href="/">
-                            <img
-                                className="h-8"
-                                src="/src/assets/logo (1).png"
-                                alt=""
-                            />
-                        </a>
-                    </div>
+                    <a href="/">
+                        <div className='flex items-center gap-1'>
+                            <img className='size-8' src={NavLogo} alt="" />
+                            <h2 className='text-3xl font-semibold text-black'>NetBloom</h2>
+                        </div>
+                    </a>
+
                     {/* nav items for large devices */}
                     <div className="space-x-8 hidden md:flex items-center">
                         {

@@ -1,9 +1,15 @@
 import CTAIMG from '../assets/cta-image.png';
+import { motion } from 'framer-motion'
+import variants from '../utils/variants';
 
 const CTA = () => {
     return (
         <section className="relative py-12">
-            <div className="max-w-7xl mx-auto bg-[#F3F3F3] rounded-md pt-8 pb-12 flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8">
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={variants('bottom', 0.2)}
+                className="max-w-7xl mx-auto bg-[#F3F3F3] rounded-md pt-8 pb-12 flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8">
                 {/* left side */}
                 <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
                     <h1 className="text-3xl font-bold text-secondary mb-4">Let’s make things happen</h1>
@@ -20,7 +26,7 @@ const CTA = () => {
                         alt=""
                     />
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

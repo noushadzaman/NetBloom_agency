@@ -1,11 +1,17 @@
-import ContactIMG from '../assets/contact.png'
+import ContactIMG from '../assets/contact.png';
+import { motion } from 'framer-motion';
+import variants from '../utils/variants';
 
 const Contact = () => {
     return (
         <section className="pt-24 pb-12 bg-white" id="contact">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* headline and description */}
-                <div className="flex flex-col md:flex-row gap-4 mb-12">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={variants('left', 0.2)}
+                    className="flex flex-col md:flex-row gap-4 mb-12">
                     <div className="flex-shrink-0 bg-primary text-black py-2 px-16 rounded-md">
                         <h2 className="text-2xl font-bold">Contact Us</h2>
                     </div>
@@ -13,10 +19,14 @@ const Contact = () => {
                         <p className="text-secondary md:w-2/3">Connect with Us:<br />
                             Let's Discuss Your Digital Marketing Needs</p>
                     </div>
-                </div>
+                </motion.div>
                 {/* contact form */}
                 <div className="flex flex-col md:flex-row justify-between bg-tertiary rounded-lg md:p-8 p-4">
-                    <div className="w-full md:w-1/2 p-4">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={variants('right', 0.5)}
+                        className="w-full md:w-1/2 p-4">
                         <form className="space-y-4">
                             {/* radio input */}
                             <div className="flex flex-col md:flex-row md:space-x-4 items-start justify-start">
@@ -48,7 +58,7 @@ const Contact = () => {
                             </div>
                             <button type="submit" className="inline-block px-6 py-3 bg-black text-white font-semibold rounded-md hover:bg-primary hover:text-black transition-all duration-300">Book a consultation</button>
                         </form>
-                    </div>
+                    </motion.div>
 
                     {/* image */}
                     <div className="relative md:flex justify-end items-center md:w-1/2 md:-m-8 overflow-hidden">

@@ -1,5 +1,5 @@
 import { FaFacebook, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-import FooterIMG from '../assets/footer-logo.png';
+import FooterIMG from '../assets/logo-white.png';
 import FooterContact from './FooterContact';
 
 const Footer = () => {
@@ -9,8 +9,9 @@ const Footer = () => {
                 {/* first section */}
                 <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-6 px-4 sm:px-6 lg:px-8 py-12'>
                     {/* logo */}
-                    <div>
-                        <img src={FooterIMG} alt="" />
+                    <div className='flex items-center gap-1'>
+                        <img className='size-8' src={FooterIMG} alt="" />
+                        <h2 className='text-3xl font-semibold text-white'>NetBloom</h2>
                     </div>
 
                     {/* menu items */}
